@@ -1,3 +1,24 @@
+// var isChromium = window.chrome;
+// var winNav = window.navigator;
+// var vendorName = winNav.vendor;
+// var isOpera = typeof window.opr !== "undefined";
+// var isIEedge = winNav.userAgent.indexOf("Edg") > -1;
+// var isIOSChrome = winNav.userAgent.match("CriOS");
+
+// checkbrowser: if (isIOSChrome) {
+// break checkbrowser;
+// } else if(
+//   isChromium !== null &&
+//   typeof isChromium !== "undefined" &&
+//   vendorName === "Google Inc." &&
+//   isOpera === false &&
+//   isIEedge === false
+// ) {
+//   break checkbrowser;
+// } else { 
+//    alert("Please use Chrome, accelerometer functionality is disabled on a number of browsers") 
+// }
+
 window.addEventListener(
   "deviceorientation",
   orientationChanged,
@@ -25,5 +46,6 @@ function orientationChanged(event)
     document.getElementById("x").textContent = int(beta);
     document.getElementById("y").textContent = int(gamma);
     document.getElementById("z").textContent = int(alpha);
-}
+  }
+  window.navigator.vibrate(300);
 
