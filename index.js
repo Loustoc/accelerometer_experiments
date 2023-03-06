@@ -22,8 +22,8 @@ function orientationChanged(event)
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
-    document.getElementById("x").textContent = beta;
-    document.getElementById("y").textContent = gamma;
-    document.getElementById("z").textContent = alpha;
+    document.getElementById("x").textContent = int(beta);
+    document.getElementById("y").textContent = int(gamma);
+    document.getElementById("z").textContent = int(alpha);
 }
 
