@@ -1,3 +1,9 @@
+window.addEventListener(
+  "deviceorientation",
+  orientationChanged,
+  true
+);
+
 const acl = new Accelerometer({ frequency: 60 });
 acl.addEventListener("reading", () => {
   console.log(`Acceleration along the X-axis ${acl.x}`);
