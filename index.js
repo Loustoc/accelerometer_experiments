@@ -54,16 +54,16 @@ function orientationChanged(event)
   var beta = event.beta; //x
   var gamma = event.gamma; //y
   var alpha = event.alpha; //z
-
-    // if (!init==0){
-    //   if (abs(x_mem - beta)>10){
-    //     boisson.style.transform = "rotate(160deg)";
-    //   }
+//PB
+    if (!init==0){
+      if (Math.abs(x_mem - beta)>10){
+        boisson.style.transform = "rotate(160deg)";
+      }
   
-    // }
-    // else{
-    //  init=1;
-    // }
+    }
+    else{
+     init=1;
+    }
     x_mem = beta;
     y_mem = gamma;
     z_mem = alpha;
