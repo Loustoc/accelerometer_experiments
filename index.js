@@ -74,7 +74,7 @@ function orientationChanged(event)
     //     }
     // }
     if (alpha > 90 && alpha <= 180){
-      var_Y = alpha - 90 * (130/90)
+      var_Y = (alpha - 90) * (130/90)
       boisson.style.transform=`translateY(${var_Y}px)`
     }
     // if (alpha < 90 && alpha >= 0){
