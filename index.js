@@ -32,9 +32,9 @@
 
     // body.style.backgroundPosition = (x + gamma - add/2) + 'px ' + (y + beta - add/2) + 'px';
 var init=0;
-var x_mem;
-var y_mem;
-var z_mem;
+var x_mem;// avant(+) - arriere(-)
+var y_mem;//gauche-droite
+var z_mem;//direction
 
 var bouteille = null;
 var boisson = null;
@@ -54,13 +54,37 @@ function orientationChanged(event)
   var beta = event.beta; //x
   var gamma = event.gamma; //y
   var alpha = event.alpha; //z
-//PB
     if (!init==0){
-      if (Math.abs(x_mem - beta)>10){
-        boisson.style.transform = "rotate(160deg)";
-      }
-  
+    //   if (alpha <= 180 && z_mem <=180 && z_mem >= 0 && alpha <= 0){
+    //     if (alpha <= 91 && z_mem <=91){
+    //       if (alpha < z_mem){
+
+    //       }
+    //       else {
+            
+    //       }
+    //     }
+    //     if (alpha >= 89 && z_mem >= 89){
+    //       if (alpha < z_mem){
+
+    //       }
+    //       else {
+
+    //       }
+    //     }
+    // }
+    if (alpha > 90 && alpha <= 180){
+      var_Y = alpha - 90 * (130/90)
+      boisson.style.transform=`translateY(${var_Y}px)`
     }
+    // if (alpha < 90 && alpha >= 0){
+    //   var_Y = alpha - 90 * (130/90)
+    //   boisson.style.transform=`translateY(${var_Y})`
+    // }
+    if (alpha == 90){
+      boisson.style.transform = "translateY(0px)";
+    }
+  }
     else{
      init=1;
     }
