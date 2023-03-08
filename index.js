@@ -77,10 +77,10 @@ function orientationChanged(event)
       var_Y = -1 * ((beta - 90) * (130/90));
       boisson.style.transform=`translateY(${var_Y}px)`
     }
-    // if (alpha < 90 && alpha >= 0){
-    //   var_Y = alpha - 90 * (130/90)
-    //   boisson.style.transform=`translateY(${var_Y})`
-    // }
+    if (beta < 90 && beta >= 0){
+      var_Y = -1 * ((90 - beta) * (130/90));
+      boisson.style.transform=`translateY(${var_Y})`
+    }
     if (beta == 90){
       boisson.style.transform = "translateY(0px)";
     }
