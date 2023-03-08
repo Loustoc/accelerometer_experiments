@@ -32,9 +32,9 @@
 
     // body.style.backgroundPosition = (x + gamma - add/2) + 'px ' + (y + beta - add/2) + 'px';
 var init=0;
-var x_mem;// avant(+) - arriere(-)
-var y_mem;//gauche-droite
-var z_mem;//direction
+// var x_mem;// avant(+) - arriere(-)
+// var y_mem;//gauche-droite
+// var z_mem;//direction
 
 var bouteille = null;
 var boisson = null;
@@ -73,15 +73,15 @@ function orientationChanged(event)
     //       }
     //     }
     // }
-    if (alpha > 90 && alpha <= 180){
-      var_Y = -1 * ((alpha - 90) * (130/90));
+    if (beta > 90 && beta <= 180){
+      var_Y = -1 * ((beta - 90) * (130/90));
       boisson.style.transform=`translateY(${var_Y}px)`
     }
     // if (alpha < 90 && alpha >= 0){
     //   var_Y = alpha - 90 * (130/90)
     //   boisson.style.transform=`translateY(${var_Y})`
     // }
-    if (alpha == 90){
+    if (beta == 90){
       boisson.style.transform = "translateY(0px)";
     }
   }
